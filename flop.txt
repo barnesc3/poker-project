@@ -1,0 +1,123 @@
+print("\nHere are your probabilities before your game starts.\n")
+print("Royal Flush: 0.000154%")
+print("Straight Flush: 0.000139%")
+print("Four of a kind: 0.0240%")
+print("Full House: 0.1441%")
+print("Flush: 0.19654%")
+print("Straight: 0.3925%")
+print("Three of a kind: 2.1128%")
+print("2 pair: 4.7539%")
+print("One pair: 42.2569%")
+print("No pair: 50.1%")
+
+print("\nIf you type a face card, please type in a number. Example: Ace = 1, Jack = 11, Queen = 12\n")
+
+
+firstCardsuit = input("\nWhat is the suit of your first card? :\n")
+
+firstCardnum = int(input("\nWhat is the number or face of your first card? :\n"))
+
+secondCardsuit = input("\nWhat is the suit of your second card? :\n")
+
+secondCardnum = int(input("\nWhat is the number or face of your second card?:\n"))
+
+
+firstCardsuit = firstCardsuit.lower()
+secondCardsuit = secondCardsuit.lower()
+
+
+
+
+
+  numberList = [firstCardnum, secondCardnum, card1Num, card2Num, card3Num]
+
+  pairflop(numberList)
+
+
+
+
+def pairflop(list):
+  numberList = list
+  pair = False
+  for x in numberList:
+    try:
+      if x in range(1, 14):
+        if numberList.count(x) == 2:
+          pair = True
+    except:
+      print("Error: Card numbers are invalid.")
+  
+  if pair:
+    print("Pair: 100%")
+  else:
+    print("Pair: 36%")
+
+
+
+
+def twopairflop(list):
+  numberList = list
+  pair = 0
+  for x in numberList:
+    try:
+      if x in range(1, 14):
+        if numberList.count(x) == 2:
+          pair += 1
+    except:
+      print("Error: Card numbers are invalid.")
+
+  if pair == 2: 
+    print("Two Pair: 45%")
+  else:
+    print("Two Pair: 12%")
+
+
+
+def threeofakindflop(list):
+  numberList = list
+  for x in numberList:
+    if x in range(1, 14):
+      print("threeofakind:9%")
+    else:
+      print("threeofakind:2%")
+
+def straight(list):
+  numberList = list
+  for x in numberList:
+    if numberList == sorted(numberList):
+      print("Straight: 100%")
+    elif (numberList[:-1] == sorted(numberList[:-1]) and number[-1] == 1):
+      print("Straight: 100%")
+    else:
+      print("Straight: ")
+
+
+
+
+def fourofakind(list):
+    numberList = list
+    for x in numberList:
+        try:
+            if x in range(1, 14):
+                if numberList.count(x) == 4:
+                    print("FourofaKing: ")
+                else:
+                    print("FourofaKind: ")   
+                
+        except:
+            print("Error: Card numbers are invalid.")
+
+if pair == 4: 
+    print("Two Pair: 45%")
+else:
+    print("Two Pair: 12%")
+
+
+
+
+def flushflop:
+    for x in numberList:
+        if(firstCardsuit == secondCardsuit):
+            print("Probality")    
+
+main()
